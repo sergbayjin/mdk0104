@@ -1,0 +1,35 @@
+using System;
+using System.Linq;
+
+namespace ArrayOperations
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 2, 4, 6, 8, 10, 12, 14, 16 };  // Пример массива
+
+            // Расчёт квадратного корня из любого элемента массива
+            int index = 2;  // Например
+            double sqrtElement = Math.Sqrt(array[index]);
+            Console.WriteLine($"Квадратный корень из элемента {array[index]}: {sqrtElement}");
+
+            // Расчёт среднего арифметического двух любых элементов массива
+            int index1 = 1, index2 = 3;
+            double average = (array[index1] + array[index2]) / 2.0;
+            Console.WriteLine($"Среднее арифметическое элементов {array[index1]} и {array[index2]}: {average}");
+
+            // Проверка положительности элемента
+            int s = 5;
+            bool isPositive = array[s] > 0;
+            Console.WriteLine($"Элемент с индексом {s} ({array[s]}) является положительным: {isPositive}");
+
+            // Проверка чётности элемента
+            int k = 4;
+            bool isEven = array[k] % 2 == 0;
+            Console.WriteLine($"Элемент с индексом {k} ({array[k]}) является чётным: {isEven}");
+
+            // Сравнение элементов
+            string comparisonResult = array[s] > array[k] ? "больше" : "не больше";
+            Console.WriteLine($"Элемент с индексом {s} ({array[s]}) {comparisonResult} элемента с индексом {k} ({array[k]})");
+
